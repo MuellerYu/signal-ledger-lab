@@ -1,5 +1,24 @@
 # Signal Ledger
 
+**English summary** (中文说明在下方)
+
+Signal Ledger is an auditable market-intelligence, forecasting and alerting system for US equities, live at [signalledgerlab.com](https://signalledgerlab.com). It keeps four steps on one traceable chain:
+
+1. Discover and de-duplicate events from primary sources: SEC filings, Alpaca news and official RSS feeds.
+2. Freeze a probability forecast, with an information cut-off, before each event happens.
+3. Record the actual outcome afterwards and score it on Brier score, direction hit and relative return.
+4. Send idempotent P0/P1 e-mail alerts.
+
+The system never trades, and judgments written after the fact never count toward the official forecast record.
+
+**Stack.** TypeScript throughout: a Next.js app (via vinext) on Cloudflare Pages with D1 (SQLite) through Drizzle ORM; a separate Cloudflare Worker on a one-minute cron for 24/7 collection, de-duplication and e-mail delivery (Resend, or a Gmail Apps Script webhook); Alpaca for market data. Tests run on `node:test`: 730 tests across 55 files.
+
+**Quality rules.** Official forecasts are append-only once frozen. Evidence must have been fetched by the system before the information cut-off. No "calibrated" claim is made with fewer than 30 settled forecasts. Free quotes are labelled with their IEX/SIP scope rather than presented as full real-time market data.
+
+**About this repository.** This is a sanitized public mirror of the private production repository, published as a single snapshot in October 2026. Database ids, owner e-mail addresses and preview domains are placeholders; secrets were never committed and live in `.dev.vars` and the Cloudflare secret store. Specs, acceptance criteria and code review are by the author; implementation was assisted by Claude Code and OpenAI Codex.
+
+---
+
 面向美股的可审计情报、预测和突发告警系统。
 
 它把四件事放在同一条可追溯链路里：
