@@ -1,0 +1,69 @@
+{
+  "policyVersion": "r8-offline",
+  "businesses": [
+    {
+      "id": "core",
+      "name": "Core",
+      "stage": "mature",
+      "economicMeaning": "cash flow",
+      "segmentationBasis": "reported_segment",
+      "revenueDriver": {
+        "formula": "reported_segment",
+        "params": {
+          "revenueB": 10
+        },
+        "evidenceId": null
+      },
+      "costDrivers": [],
+      "disclosedData": [],
+      "forecastAssumptions": [],
+      "growthConstraints": [],
+      "forecastYears": [
+        {
+          "year": 1,
+          "revenueB": 10,
+          "fcfB": 2
+        },
+        {
+          "year": 2,
+          "fcfB": 3
+        },
+        {
+          "year": 3,
+          "fcfB": 4
+        }
+      ],
+      "valuationMethod": "ev_sales",
+      "multiple": null,
+      "rationale": "synthetic executable DCF",
+      "applicabilityConditions": [],
+      "overlaps": []
+    }
+  ],
+  "capitalRequirements": [],
+  "financing": [],
+  "dilution": [],
+  "valuationMethods": [
+    {
+      "model": "ev_sales",
+      "purpose": "valuation",
+      "multiple": 3,
+      "appliesToBusinessIds": [
+        "core"
+      ],
+      "rationale": "segment"
+    }
+  ],
+  "scenarios": [],
+  "probabilitiesCheck": {
+    "owners": [],
+    "note": ""
+  },
+  "sources": [],
+  "missingEvidence": [],
+  "primaryMethod": "sotp",
+  "aggregationRule": "sotp",
+  "crossChecks": [],
+  "thesisChanges": [],
+  "revisionRecords": []
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "market-signal-monitor",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-22",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "market-signal-monitor",
+      "database_id": "00000000-0000-0000-0000-000000000001",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "vars": {
+    "SEC_USER_AGENT": "MarketSignalLab/0.1 owner@example.com",
+    "SEC_MAX_CONCURRENCY": "4",
+    "SEC_BOOTSTRAP_HOURS": "1080",
+    "WATCHLIST_TIER_MAX": "1",
+    "ENABLE_ALPACA_NEWS": "true",
+    "ALPACA_BOOTSTRAP_HOURS": "6",
+    "ALPACA_DATA_FEED": "iex",
+    "ALERT_FROM_EMAIL": "onboarding@resend.dev",
+    "ALERT_TO_EMAIL": "owner@example.com",
+    "EMAIL_DELIVERY_PROVIDER": "resend",
+    "DASHBOARD_ALLOWED_ORIGIN": "*",
+    // The canonical valuation endpoint. The worker reads valuations from the
+    // Pages app rather than carrying a second valuation engine of its own.
+    "SIGNAL_LEDGER_ORIGIN": "https://signalledgerlab.com",
+    // The canonical public origin, for links that leave the site (auth links).
+    "SITE_ORIGIN": "https://signalledgerlab.com",
+    // Per-kind sender identities on the verified signalledgerlab.com domain.
+    // Each falls back to ALERT_FROM_EMAIL when unset.
+    "EMAIL_FROM_AUTH": "Signal Ledger <auth@signalledgerlab.com>",
+    "EMAIL_FROM_BRIEF": "Signal Ledger <brief@signalledgerlab.com>",
+    // Stripe billing (TEST MODE ONLY). The webhook secret is a real secret and
+    // lives in the Worker secret store (wrangler secret put STRIPE_WEBHOOK_SECRET),
+    // never in this file. The price ids live on the Pages side, where checkout
+    // runs; the worker only verifies the webhook signature.
+    // External delivery avoids the duplicate inbox + sent copy shown when the
+    // same Gmail account sends mail to itself.
+    "DRY_RUN": "false"
+  },
+  // Stripe billing sandbox (TEST MODE ONLY). Deploys the SAME worker code as a
+  // separate Worker bound ONLY to its own D1, with every cron trigger removed so
+  // it can never run market ingestion, the Daily Brief, or email fan-out. The
+  // Stripe webhook (STRIPE_WEBHOOK_SECRET) is stored in this environment's
+  // secret store, never in this file. Production (top-level) is untouched.
+  "env": {
+    "sandbox": {
+      "name": "market-signal-monitor-sandbox",
+      "triggers": {
+        "crons": []
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "market-signal-monitor-sandbox",
+          "database_id": "00000000-0000-0000-0000-000000000002",
+          "migrations_dir": "migrations-sandbox"
+        }
+      ],
+      "vars": {
+        // DRY_RUN keeps market ingestion, the Daily Brief and alert fan-out off;
+        // it does NOT gate the service-email drain (sendOutboxItem), so auth
+        // magic links still deliver. Only the minimum auth-email capability is
+        // configured below — no Alpaca, AI, or market pipeline vars. Cron is
+        // already removed above, so the Pages "flush now" nudge is the only
+        // delivery trigger.
+        "DRY_RUN": "true",
+        // The stable branch alias of the dedicated Preview branch. Baked into
+        // magic-link URLs; must NOT be signalledgerlab.com.
+        "SITE_ORIGIN": "https://your-project.pages.dev",
+        "EMAIL_DELIVERY_PROVIDER": "resend",
+        // Resend's built-in test sender. Keep E2E auth-email to the owner's
+        // verified/test address; do not enable Daily Brief delivery here.
+        "ALERT_FROM_EMAIL": "onboarding@resend.dev",
+        // Auth links go to arbitrary recipients, so this must be an address on
+        // the domain verified in Resend. onboarding@resend.dev is Resend's test
+        // sender and 403s (validation_error) for any recipient but the account
+        // owner, which is what broke the sandbox magic-link login.
+        "EMAIL_FROM_AUTH": "auth@signalledgerlab.com",
+        // The PRO Daily Brief fan-out also reaches arbitrary recipients, so its
+        // sender needs the same verified-domain property as auth. The worker
+        // resolves per kind via senderForKind: daily_brief -> EMAIL_FROM_BRIEF.
+        "EMAIL_FROM_BRIEF": "brief@signalledgerlab.com"
+      }
+    }
+  }
+}

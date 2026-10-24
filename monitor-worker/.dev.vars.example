@@ -1,0 +1,44 @@
+# Copy this file to .dev.vars for local development. Never commit .dev.vars.
+
+# Required for the protected manual-run route.
+CRON_SECRET=replace-with-a-long-random-secret
+
+# Optional protection for GET /api/dashboard. Leave blank only for local use.
+DASHBOARD_READ_KEY=replace-with-a-long-random-read-key
+
+# Optional Alpaca News ingestion; also required to settle post-event forecasts
+# from real daily market bars. If absent, due forecasts stay unresolved with
+# qualityFlag=data_unavailable.
+ALPACA_API_KEY_ID=
+ALPACA_API_SECRET_KEY=
+
+# Preferred for live P0/P1 email: protected Gmail Apps Script webhook.
+GMAIL_WEBHOOK_URL=
+GMAIL_WEBHOOK_SECRET=
+
+# Optional fallback provider. ALERT_FROM_EMAIL must use a Resend-verified
+# sender domain.
+RESEND_API_KEY=
+ALERT_FROM_EMAIL=Market Signal Lab <alerts@your-verified-domain.example>
+
+# Non-secret local overrides. The SEC user agent must identify the application
+# and provide a monitored contact address.
+SEC_USER_AGENT=MarketSignalLab/0.1 owner@example.com
+SEC_MAX_CONCURRENCY=4
+SEC_BOOTSTRAP_HOURS=72
+WATCHLIST_TIER_MAX=1
+ENABLE_ALPACA_NEWS=true
+ALPACA_BOOTSTRAP_HOURS=6
+ALPACA_DATA_FEED=iex
+ALERT_TO_EMAIL=owner@example.com
+DASHBOARD_ALLOWED_ORIGIN=http://localhost:3000
+DRY_RUN=true
+
+# Paddle billing webhook (sandbox only). PADDLE_WEBHOOK_SECRET is the
+# notification-destination secret Paddle HMAC-signs each delivery with; keep it
+# server-only (wrangler secret put PADDLE_WEBHOOK_SECRET, or .dev.vars locally).
+PADDLE_WEBHOOK_SECRET=
+PADDLE_ENVIRONMENT=sandbox
+# The designated one-time "WeChat Annual Access" price id. This is the ONLY
+# price the webhook will grant 365 days of access for.
+PADDLE_PRICE_PRO_ONETIME_CNY=

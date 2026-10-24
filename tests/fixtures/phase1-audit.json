@@ -1,0 +1,1627 @@
+{
+  "AMD": {
+    "ticker": "AMD",
+    "quote": {
+      "price": 210,
+      "asOf": "Sep 14, 2026 4:00 PM ET"
+    },
+    "evidenceVersion": "9b531d9f",
+    "assumptionVersion": "3df28c16",
+    "classification": {
+      "modelFamily": "ai_semiconductor",
+      "growthStage": "Derived from reported financial history",
+      "capitalIntensity": "Capital intensive"
+    },
+    "evidenceAssumptions": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        8.055518971681654,
+        9.608530302780133,
+        11.017585902681029,
+        12.298961379771796,
+        13.4721592640237,
+        14.556868085981359
+      ],
+      "normalizedCashFlows": [
+        8.055518971681654,
+        9.608530302780133,
+        11.017585902681029,
+        12.298961379771796,
+        13.4721592640237,
+        14.556868085981359
+      ],
+      "netCashB": 9,
+      "dilutedSharesB": 1.2,
+      "wacc": 0.105,
+      "terminalGrowth": 0.035,
+      "costOfEquity": 0.105,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 3.4096363636363645,
+      "forwardPe": 23.305454545454552,
+      "normalizedEbitdaB": 9.490800309917356,
+      "evEbitdaMultiple": 12.277090909090912,
+      "forwardFcfB": 7.217709400826447,
+      "evFcfMultiple": 21.144545454545458,
+      "forwardRevenueB": 28.413636363636364,
+      "evSalesMultiple": 5.371195103305786,
+      "fcfMargin": 0.2540227272727273,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyBaseline": {
+      "cashFlowBasis": "analyst_fcff",
+      "cashFlows": [
+        16,
+        30,
+        36,
+        43,
+        52,
+        63
+      ],
+      "normalizedCashFlows": null,
+      "netCashB": 9.885,
+      "dilutedSharesB": 1.632,
+      "wacc": 0.105,
+      "terminalGrowth": 0.035,
+      "costOfEquity": null,
+      "preTaxCostOfDebt": null,
+      "effectiveTaxRate": null,
+      "taxRateBasis": null,
+      "forwardEps": 15.61,
+      "forwardPe": 32,
+      "normalizedEbitdaB": null,
+      "evEbitdaMultiple": null,
+      "forwardFcfB": 30,
+      "evFcfMultiple": 24,
+      "forwardRevenueB": 87.7,
+      "evSalesMultiple": 8.5,
+      "fcfMargin": 0.34,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyThesis": {
+      "growthDelta": 0,
+      "marginDelta": 0,
+      "multipleDelta": 0,
+      "note": "Signal Ledger currently adopts the imported AI baseline without an incremental overlay."
+    },
+    "capitalCost": null,
+    "plan": {
+      "primaryMethod": "dcf",
+      "aggregationRule": "single_model",
+      "missingEvidence": [
+        "family ai_semiconductor intends sotp as primary, but raw evidence lacks the required segment data; dcf used instead (sotp requires research-loop evidence)",
+        "Live consensus estimates",
+        "A filing-linked multi-year FCFF bridge",
+        "A comparable-company multiple set",
+        "沿用 2026-09-11 研究假设；AMD latest 10-Q did not expose a machine-readable segment revenue table, so the company-specific segment SOTP could not be rebuilt，以下输入仍待补充：Live sell-side consensus and revision history、Company-specific management guidance normalization、Peer-regression and sector KPI pack"
+      ],
+      "businesses": [
+        {
+          "id": "b1",
+          "name": "Advanced Micro Devices",
+          "stage": "mature",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": {
+            "formula": "reported_segment",
+            "params": {},
+            "evidenceId": "deterministic-evidence"
+          },
+          "valuationMethod": "dcf",
+          "disclosedData": [
+            {
+              "label": "Revenue",
+              "value": 28.413636363636364,
+              "unit": "USD billions",
+              "evidenceId": "deterministic-evidence"
+            }
+          ],
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.413636363636364,
+              "margin": 0.2540227272727273,
+              "fcfB": 8.055518971681654
+            },
+            {
+              "year": 2027,
+              "margin": 0.2540227272727273,
+              "fcfB": 9.608530302780133,
+              "growth": 0.19278848905426593
+            },
+            {
+              "year": 2028,
+              "margin": 0.2540227272727273,
+              "fcfB": 11.017585902681029,
+              "growth": 0.14664631899981617
+            },
+            {
+              "year": 2029,
+              "margin": 0.2540227272727273,
+              "fcfB": 12.298961379771796,
+              "growth": 0.11630274439511812
+            },
+            {
+              "year": 2030,
+              "margin": 0.2540227272727273,
+              "fcfB": 13.4721592640237,
+              "growth": 0.09538999660422309
+            },
+            {
+              "year": 2031,
+              "margin": 0.2540227272727273,
+              "fcfB": 14.556868085981359,
+              "growth": 0.08051484551955124
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "financing": [],
+      "dilution": [],
+      "capitalRequirements": [],
+      "scenarios": []
+    },
+    "compiledBaseline": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        8.055518971681654,
+        9.608530302780133,
+        11.017585902681029,
+        12.298961379771796,
+        13.4721592640237,
+        14.556868085981359
+      ],
+      "normalizedCashFlows": [
+        8.055518971681654,
+        9.608530302780133,
+        11.017585902681029,
+        12.298961379771796,
+        13.4721592640237,
+        14.556868085981359
+      ],
+      "netCashB": 9,
+      "dilutedSharesB": 1.2,
+      "wacc": 0.105,
+      "terminalGrowth": 0.035,
+      "costOfEquity": 0.105,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 3.4096363636363645,
+      "forwardPe": 23.305454545454552,
+      "normalizedEbitdaB": 9.490800309917356,
+      "evEbitdaMultiple": 12.277090909090912,
+      "forwardFcfB": 8.055518971681654,
+      "evFcfMultiple": 21.144545454545458,
+      "forwardRevenueB": 28.413636363636364,
+      "evSalesMultiple": 5.371195103305786,
+      "fcfMargin": 0.2540227272727273,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "compiledClassification": {
+      "modelFamily": "ai_semiconductor"
+    },
+    "legacyOutput": {
+      "fairValue": 451.4866,
+      "scenarios": {
+        "bear": 338.51871030710146,
+        "base": 451.4865632471788,
+        "bull": 615.9958152665839
+      },
+      "models": [
+        {
+          "model": "sotp",
+          "label": "Sum of the Parts",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.32,
+          "applicability": 1,
+          "confidence": 0,
+          "priorReliability": 0.7,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "sotpSegments"
+          ],
+          "diagnostics": null,
+          "explanation": "Values each operating segment on its own driver and multiple, probability-weights optionality, then applies the equity bridge."
+        },
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 418.0891,
+          "baseWeight": 0.3,
+          "applicability": 1,
+          "confidence": 0.78,
+          "priorReliability": 0.72,
+          "effectiveWeight": 0.4023,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted FCFF at WACC plus net cash, divided by diluted shares (unlevered analyst FCFF, discounted at WACC)."
+        },
+        {
+          "model": "forward_pe",
+          "label": "Forward P/E",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 499.52,
+          "baseWeight": 0.2,
+          "applicability": 1,
+          "confidence": 0.76,
+          "priorReliability": 0.75,
+          "effectiveWeight": 0.2722,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward EPS multiplied by the justified forward earnings multiple."
+        },
+        {
+          "model": "ev_fcf",
+          "label": "EV / FCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 447.2335,
+          "baseWeight": 0.18,
+          "applicability": 1,
+          "confidence": 0.72,
+          "priorReliability": 0.69,
+          "effectiveWeight": 0.2135,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward unlevered FCF capitalized at an EV/FCF multiple, bridged to equity."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 462.8278,
+          "baseWeight": 0.12,
+          "applicability": 1,
+          "confidence": 0.64,
+          "priorReliability": 0.61,
+          "effectiveWeight": 0.1119,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "calculated",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.76,
+          "priorReliability": 0.74,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": {
+            "impliedFcfCagr": -0.02406208604478982,
+            "terminalFcfB": 27.21510506107233,
+            "impliedRevenueB": 80.04442665021273
+          },
+          "explanation": "Diagnostic only: the implied growth path is not blended into fair value."
+        }
+      ]
+    },
+    "researchOutput": {
+      "fairValue": 138.3174,
+      "status": "screening",
+      "scenarios": {
+        "bear": 86.34892729606518,
+        "base": 138.31739298875516,
+        "bull": 224.17109823823603
+      },
+      "probabilityDistribution": {
+        "p10": 86.34892729606518,
+        "p25": 108.2084179919859,
+        "p50": 138.25767705971612,
+        "p75": 178.12323066655512,
+        "p90": 224.17109823823603
+      },
+      "models": [
+        {
+          "model": "sotp",
+          "label": "Sum of the Parts",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.32,
+          "applicability": 0,
+          "confidence": 0.7,
+          "priorReliability": 0.7,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "sotpSegments"
+          ],
+          "diagnostics": null,
+          "explanation": "Values each operating segment on its own driver and multiple, probability-weights optionality, then applies the equity bridge."
+        },
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 138.3174,
+          "baseWeight": 0.3,
+          "applicability": 1,
+          "confidence": 0.72,
+          "priorReliability": 0.72,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted levered cash flow to equity at the cost of equity, with no enterprise bridge (reported CFO−CapEx levered proxy, discounted at the cost of equity)."
+        },
+        {
+          "model": "forward_pe",
+          "label": "Forward P/E",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 79.4631,
+          "baseWeight": 0.2,
+          "applicability": 0,
+          "confidence": 0.75,
+          "priorReliability": 0.75,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward EPS multiplied by the justified forward earnings multiple."
+        },
+        {
+          "model": "ev_fcf",
+          "label": "EV / FCF",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.18,
+          "applicability": 0,
+          "confidence": 0.69,
+          "priorReliability": 0.69,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "unlevered forwardFcfB"
+          ],
+          "diagnostics": null,
+          "explanation": "EV/FCF requires an explicitly unlevered cash-flow basis. Levered or unspecified proxies cannot be capitalized as enterprise value and then bridged to equity."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 134.6793,
+          "baseWeight": 0.12,
+          "applicability": 0,
+          "confidence": 0.61,
+          "priorReliability": 0.61,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "calculated",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.74,
+          "priorReliability": 0.74,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": {
+            "impliedFcfCagr": 0.25434077571090297,
+            "terminalFcfB": 23.78587464484113,
+            "impliedRevenueB": 93.63679738507736
+          },
+          "explanation": "Diagnostic only: the implied growth path is not blended into fair value."
+        }
+      ],
+      "marketImplied": {
+        "headline": "How much durable accelerator growth and cash conversion is already capitalized?",
+        "impliedFcfCagr": 0.25434077571090297,
+        "terminalFcfB": 23.78587464484113,
+        "impliedRevenueB": 93.63679738507736,
+        "impliedForwardPe": 61.59014557670771,
+        "requiredGrowthPct": 0.25434077571090297,
+        "requiredMarginPct": null,
+        "requiredRevenueB": 45.24132810786222,
+        "requiredSegmentValueB": null,
+        "requiredSuccessProbability": null
+      },
+      "rating": "WATCH",
+      "riskAdjustedUpside": -0.1778
+    },
+    "orchestration": {
+      "aiCalls": 0,
+      "toolCalls": 0,
+      "usedDeterministicFallback": true,
+      "compilationFailed": false,
+      "capabilityGap": null
+    }
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "quote": {
+      "price": 180,
+      "asOf": "Sep 14, 2026 4:00 PM ET"
+    },
+    "evidenceVersion": "5c2a0adf",
+    "assumptionVersion": "a031d890",
+    "classification": {
+      "modelFamily": "ai_compute_platform",
+      "growthStage": "Derived from reported financial history",
+      "capitalIntensity": "Capital intensive"
+    },
+    "evidenceAssumptions": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "normalizedCashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "netCashB": 9,
+      "dilutedSharesB": 1.2,
+      "wacc": 0.1,
+      "terminalGrowth": 0.035,
+      "costOfEquity": 0.1,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 3.445636363636364,
+      "forwardPe": 26,
+      "normalizedEbitdaB": 11.356895764462811,
+      "evEbitdaMultiple": 12.565090909090912,
+      "forwardFcfB": 9.059804855371901,
+      "evFcfMultiple": 24,
+      "forwardRevenueB": 28.713636363636365,
+      "evSalesMultiple": 7.572545454545455,
+      "fcfMargin": 0.3155227272727273,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyBaseline": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "normalizedCashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "netCashB": 9,
+      "dilutedSharesB": 1.2,
+      "wacc": 0.1,
+      "terminalGrowth": 0.035,
+      "costOfEquity": 0.1,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 3.445636363636364,
+      "forwardPe": 26,
+      "normalizedEbitdaB": 11.356895764462811,
+      "evEbitdaMultiple": 12.565090909090912,
+      "forwardFcfB": 9.059804855371901,
+      "evFcfMultiple": 24,
+      "forwardRevenueB": 28.713636363636365,
+      "evSalesMultiple": 7.572545454545455,
+      "fcfMargin": 0.3155227272727273,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyThesis": {
+      "growthDelta": 0,
+      "marginDelta": 0,
+      "multipleDelta": 0,
+      "note": "Signal Ledger changes operating assumptions only; it never inserts a target price directly."
+    },
+    "capitalCost": null,
+    "plan": {
+      "primaryMethod": "dcf",
+      "aggregationRule": "single_model",
+      "missingEvidence": [
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "businesses": [
+        {
+          "id": "b1",
+          "name": "NVIDIA",
+          "stage": "mature",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": {
+            "formula": "reported_segment",
+            "params": {},
+            "evidenceId": "deterministic-evidence"
+          },
+          "valuationMethod": "dcf",
+          "disclosedData": [
+            {
+              "label": "Revenue",
+              "value": 28.713636363636365,
+              "unit": "USD billions",
+              "evidenceId": "deterministic-evidence"
+            }
+          ],
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.713636363636365,
+              "margin": 0.3155227272727273,
+              "fcfB": 10.482535104935353
+            },
+            {
+              "year": 2027,
+              "margin": 0.3155227272727273,
+              "fcfB": 12.857316807248347,
+              "growth": 0.22654650602552295
+            },
+            {
+              "year": 2028,
+              "margin": 0.3155227272727273,
+              "fcfB": 15.014006888068765,
+              "growth": 0.16774029240724464
+            },
+            {
+              "year": 2029,
+              "margin": 0.3155227272727273,
+              "fcfB": 16.971392629145434,
+              "growth": 0.1303706436042833
+            },
+            {
+              "year": 2030,
+              "margin": 0.3155227272727273,
+              "fcfB": 18.756287488359078,
+              "growth": 0.10517079524448669
+            },
+            {
+              "year": 2031,
+              "margin": 0.3155227272727273,
+              "fcfB": 20.397699573744532,
+              "growth": 0.08751263203894588
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "financing": [],
+      "dilution": [],
+      "capitalRequirements": [],
+      "scenarios": []
+    },
+    "compiledBaseline": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "normalizedCashFlows": [
+        10.482535104935353,
+        12.857316807248347,
+        15.014006888068765,
+        16.971392629145434,
+        18.756287488359078,
+        20.397699573744532
+      ],
+      "netCashB": 9,
+      "dilutedSharesB": 1.2,
+      "wacc": 0.1,
+      "terminalGrowth": 0.035,
+      "costOfEquity": 0.1,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 3.445636363636364,
+      "forwardPe": 26,
+      "normalizedEbitdaB": 11.356895764462811,
+      "evEbitdaMultiple": 12.565090909090912,
+      "forwardFcfB": 10.482535104935353,
+      "evFcfMultiple": 24,
+      "forwardRevenueB": 28.713636363636365,
+      "evSalesMultiple": 7.572545454545455,
+      "fcfMargin": 0.3155227272727273,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "compiledClassification": {
+      "modelFamily": "ai_compute_platform"
+    },
+    "legacyOutput": {
+      "fairValue": 157.4898,
+      "scenarios": {
+        "bear": 110.18595926873716,
+        "base": 157.48980806342945,
+        "bull": 235.20367322050288
+      },
+      "models": [
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 207.9378,
+          "baseWeight": 0.28,
+          "applicability": 1,
+          "confidence": 0.56,
+          "priorReliability": 0.73,
+          "effectiveWeight": 0.4725,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted levered cash flow to equity at the cost of equity, with no enterprise bridge (reported CFO−CapEx levered proxy, discounted at the cost of equity)."
+        },
+        {
+          "model": "forward_pe",
+          "label": "Forward P/E",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 89.5865,
+          "baseWeight": 0.24,
+          "applicability": 1,
+          "confidence": 0.54,
+          "priorReliability": 0.76,
+          "effectiveWeight": 0.4066,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward EPS multiplied by the justified forward earnings multiple."
+        },
+        {
+          "model": "ev_fcf",
+          "label": "EV / FCF",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.2,
+          "applicability": 1,
+          "confidence": 0.56,
+          "priorReliability": 0.71,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "unlevered forwardFcfB"
+          ],
+          "diagnostics": null,
+          "explanation": "EV/FCF requires an explicitly unlevered cash-flow basis. Levered or unspecified proxies cannot be capitalized as enterprise value and then bridged to equity."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 188.6961,
+          "baseWeight": 0.1,
+          "applicability": 1,
+          "confidence": 0.48,
+          "priorReliability": 0.61,
+          "effectiveWeight": 0.1209,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "calculated",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.52,
+          "priorReliability": 0.74,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": {
+            "impliedFcfCagr": 0.07704986122624546,
+            "terminalFcfB": 17.301891393976003,
+            "impliedRevenueB": 54.83564224842931
+          },
+          "explanation": "Diagnostic only: the implied growth path is not blended into fair value."
+        }
+      ]
+    },
+    "researchOutput": {
+      "fairValue": 207.9378,
+      "status": "screening",
+      "scenarios": {
+        "bear": 126.07145900826816,
+        "base": 207.93780578075595,
+        "bull": 351.28494292246285
+      },
+      "probabilityDistribution": {
+        "p10": 126.07145900826816,
+        "p25": 159.82906160725756,
+        "p50": 209.17156243785973,
+        "p75": 274.66595679480287,
+        "p90": 351.28494292246285
+      },
+      "models": [
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 207.9378,
+          "baseWeight": 0.28,
+          "applicability": 1,
+          "confidence": 0.73,
+          "priorReliability": 0.73,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted levered cash flow to equity at the cost of equity, with no enterprise bridge (reported CFO−CapEx levered proxy, discounted at the cost of equity)."
+        },
+        {
+          "model": "forward_pe",
+          "label": "Forward P/E",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 89.5865,
+          "baseWeight": 0.24,
+          "applicability": 0,
+          "confidence": 0.76,
+          "priorReliability": 0.76,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward EPS multiplied by the justified forward earnings multiple."
+        },
+        {
+          "model": "ev_fcf",
+          "label": "EV / FCF",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.2,
+          "applicability": 0,
+          "confidence": 0.71,
+          "priorReliability": 0.71,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "unlevered forwardFcfB"
+          ],
+          "diagnostics": null,
+          "explanation": "EV/FCF requires an explicitly unlevered cash-flow basis. Levered or unspecified proxies cannot be capitalized as enterprise value and then bridged to equity."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 188.6961,
+          "baseWeight": 0.1,
+          "applicability": 0,
+          "confidence": 0.61,
+          "priorReliability": 0.61,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "calculated",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.74,
+          "priorReliability": 0.74,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": {
+            "impliedFcfCagr": 0.07704986122624546,
+            "terminalFcfB": 17.301891393976003,
+            "impliedRevenueB": 54.83564224842931
+          },
+          "explanation": "Diagnostic only: the implied growth path is not blended into fair value."
+        }
+      ],
+      "marketImplied": {
+        "headline": "How much durable compute growth, software mix and cash conversion is already priced in?",
+        "impliedFcfCagr": 0.07704986122624546,
+        "terminalFcfB": 17.301891393976003,
+        "impliedRevenueB": 54.83564224842931,
+        "impliedForwardPe": 52.23998733576064,
+        "requiredGrowthPct": 0.07704986122624546,
+        "requiredMarginPct": null,
+        "requiredRevenueB": 27.335590290283076,
+        "requiredSegmentValueB": null,
+        "requiredSuccessProbability": null
+      },
+      "rating": "WATCH",
+      "riskAdjustedUpside": 0.0769
+    },
+    "orchestration": {
+      "aiCalls": 0,
+      "toolCalls": 0,
+      "usedDeterministicFallback": true,
+      "compilationFailed": false,
+      "capabilityGap": null
+    }
+  },
+  "OKLO": {
+    "ticker": "OKLO",
+    "quote": {
+      "price": 60,
+      "asOf": "Sep 14, 2026 4:00 PM ET"
+    },
+    "evidenceVersion": "69674f85",
+    "assumptionVersion": "9851df40",
+    "classification": {
+      "modelFamily": "advanced_nuclear_project_npv",
+      "growthStage": "Derived from reported financial history",
+      "capitalIntensity": "Capital intensive"
+    },
+    "evidenceAssumptions": {
+      "cashFlowBasis": "derived_proxy",
+      "cashFlows": null,
+      "normalizedCashFlows": null,
+      "netCashB": 1.1,
+      "dilutedSharesB": 0.15,
+      "wacc": 0.15,
+      "terminalGrowth": 0.025,
+      "costOfEquity": 0.15,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": null,
+      "forwardPe": 19.759999999999998,
+      "normalizedEbitdaB": null,
+      "evEbitdaMultiple": 11.879999999999999,
+      "forwardFcfB": null,
+      "evFcfMultiple": 20.4,
+      "forwardRevenueB": null,
+      "evSalesMultiple": 2.856,
+      "fcfMargin": 0.14,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyBaseline": {
+      "cashFlowBasis": "derived_proxy",
+      "cashFlows": null,
+      "normalizedCashFlows": null,
+      "netCashB": 1.1,
+      "dilutedSharesB": 0.15,
+      "wacc": 0.15,
+      "terminalGrowth": 0.025,
+      "costOfEquity": 0.15,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": null,
+      "forwardPe": 19.759999999999998,
+      "normalizedEbitdaB": null,
+      "evEbitdaMultiple": 11.879999999999999,
+      "forwardFcfB": null,
+      "evFcfMultiple": 20.4,
+      "forwardRevenueB": null,
+      "evSalesMultiple": 2.856,
+      "fcfMargin": 0.14,
+      "sotpSegments": null,
+      "projectNpvAssets": [
+        {
+          "name": "Licensed and announced reactor projects at delivery milestones",
+          "npvB": 3.5200000000000005,
+          "probability": 0.3
+        },
+        {
+          "name": "Early-stage development pipeline and fuel optionality",
+          "npvB": 2.64,
+          "probability": 0.15
+        }
+      ],
+      "rnpvAssets": null,
+      "otherAssetValueB": 1.1
+    },
+    "legacyThesis": {
+      "growthDelta": 0,
+      "marginDelta": 0,
+      "multipleDelta": 0,
+      "note": "Signal Ledger changes operating assumptions only; it never inserts a target price directly."
+    },
+    "capitalCost": null,
+    "plan": {
+      "primaryMethod": "project_npv",
+      "aggregationRule": "single_model",
+      "missingEvidence": [
+        "Reported full fiscal year (the forecast is annualized from the latest interim period)",
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "businesses": [
+        {
+          "id": "b1",
+          "name": "Oklo",
+          "stage": "mature",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": {
+            "formula": "reported_segment",
+            "params": {},
+            "evidenceId": "deterministic-evidence"
+          },
+          "valuationMethod": "project_npv",
+          "disclosedData": [
+            {
+              "label": "Revenue",
+              "value": null,
+              "unit": "USD billions",
+              "evidenceId": "deterministic-evidence"
+            }
+          ],
+          "forecastYears": [
+            {
+              "year": 2026,
+              "margin": 0.14
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "financing": [],
+      "dilution": [],
+      "capitalRequirements": [],
+      "scenarios": []
+    },
+    "compiledBaseline": {
+      "cashFlowBasis": "derived_proxy",
+      "cashFlows": [],
+      "normalizedCashFlows": [],
+      "netCashB": 1.1,
+      "dilutedSharesB": 0.15,
+      "wacc": 0.15,
+      "terminalGrowth": 0.025,
+      "costOfEquity": 0.15,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": null,
+      "forwardPe": 19.759999999999998,
+      "normalizedEbitdaB": null,
+      "evEbitdaMultiple": 11.879999999999999,
+      "forwardFcfB": null,
+      "evFcfMultiple": 20.4,
+      "forwardRevenueB": null,
+      "evSalesMultiple": 2.856,
+      "fcfMargin": 0.14,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "compiledClassification": {
+      "modelFamily": "advanced_nuclear_project_npv"
+    },
+    "legacyOutput": {
+      "fairValue": 17.0133,
+      "scenarios": {
+        "bear": 11.30898069096307,
+        "base": 17.013333333333335,
+        "bull": 26.345431009234407
+      },
+      "models": [
+        {
+          "model": "project_npv",
+          "label": "Project NPV",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 17.0133,
+          "baseWeight": 0.46,
+          "applicability": 1,
+          "confidence": 0.4,
+          "priorReliability": 0.6,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": {
+            "projectsWeighted": 2
+          },
+          "explanation": "Development-stage project NPVs weighted by delivery probability, plus other net assets and the equity bridge."
+        },
+        {
+          "model": "normalized_dcf",
+          "label": "Normalized DCF",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.24,
+          "applicability": 1,
+          "confidence": 0.32,
+          "priorReliability": 0.55,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "normalizedCashFlows"
+          ],
+          "diagnostics": null,
+          "explanation": "Uses a normalized cash-flow path when current investment or cyclicality distorts reported FCF, discounted at WACC plus net cash (derived proxy, discounted at WACC)."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.3,
+          "applicability": 1,
+          "confidence": 0.3,
+          "priorReliability": 0.58,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "forwardRevenueB"
+          ],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.34,
+          "priorReliability": 0.52,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "cashFlows or normalizedCashFlows"
+          ],
+          "diagnostics": null,
+          "explanation": "Solves for the operating path required to justify the selected price."
+        }
+      ]
+    },
+    "researchOutput": {
+      "fairValue": 17.0133,
+      "status": "screening",
+      "scenarios": {
+        "bear": 11.30898069096307,
+        "base": 17.013333333333335,
+        "bull": 26.345431009234407
+      },
+      "probabilityDistribution": {
+        "p10": 11.30898069096307,
+        "p25": 13.500283177150763,
+        "p50": 17.03227342704399,
+        "p75": 21.59605971664433,
+        "p90": 26.345431009234407
+      },
+      "models": [
+        {
+          "model": "project_npv",
+          "label": "Project NPV",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 17.0133,
+          "baseWeight": 0.46,
+          "applicability": 1,
+          "confidence": 0.4,
+          "priorReliability": 0.6,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": {
+            "projectsWeighted": 2
+          },
+          "explanation": "Development-stage project NPVs weighted by delivery probability, plus other net assets and the equity bridge."
+        },
+        {
+          "model": "normalized_dcf",
+          "label": "Normalized DCF",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.24,
+          "applicability": 1,
+          "confidence": 0.32,
+          "priorReliability": 0.55,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "normalizedCashFlows"
+          ],
+          "diagnostics": null,
+          "explanation": "Uses a normalized cash-flow path when current investment or cyclicality distorts reported FCF, discounted at WACC plus net cash (derived proxy, discounted at WACC)."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0.3,
+          "applicability": 1,
+          "confidence": 0.3,
+          "priorReliability": 0.58,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "forwardRevenueB"
+          ],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately."
+        },
+        {
+          "model": "reverse_dcf",
+          "label": "Reverse DCF",
+          "role": "diagnostic",
+          "status": "input_required",
+          "value": null,
+          "baseWeight": 0,
+          "applicability": 1,
+          "confidence": 0.34,
+          "priorReliability": 0.52,
+          "effectiveWeight": 0,
+          "missingInputs": [
+            "cashFlows or normalizedCashFlows"
+          ],
+          "diagnostics": null,
+          "explanation": "Solves for the operating path required to justify the selected price."
+        }
+      ],
+      "marketImplied": {
+        "headline": "What are licensed, funded and development-stage nuclear projects worth after delivery probability and capital cost?",
+        "impliedFcfCagr": null,
+        "terminalFcfB": null,
+        "impliedRevenueB": null,
+        "impliedForwardPe": null,
+        "requiredGrowthPct": null,
+        "requiredMarginPct": null,
+        "requiredRevenueB": 2.766106442577031,
+        "requiredSegmentValueB": null,
+        "requiredSuccessProbability": null
+      },
+      "rating": "WATCH",
+      "riskAdjustedUpside": -0.2289
+    },
+    "orchestration": {
+      "aiCalls": 0,
+      "toolCalls": 0,
+      "usedDeterministicFallback": true,
+      "compilationFailed": true,
+      "capabilityGap": "family advanced_nuclear_project_npv is anchored to project_npv; raw evidence lacks the segment/project data required to parameterize it, and no whole-company substitute is legitimate"
+    }
+  },
+  "SPCX": {
+    "ticker": "SPCX",
+    "quote": {
+      "price": 120,
+      "asOf": "Sep 14, 2026 4:00 PM ET"
+    },
+    "evidenceVersion": "be807c8d",
+    "assumptionVersion": "2d983bc5",
+    "classification": {
+      "modelFamily": "integrated_space_connectivity_ai_platform",
+      "growthStage": "Derived from reported financial history",
+      "capitalIntensity": "Capital intensive"
+    },
+    "evidenceAssumptions": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "normalizedCashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "netCashB": 49,
+      "dilutedSharesB": 5.8,
+      "wacc": 0.14,
+      "terminalGrowth": 0.03,
+      "costOfEquity": 0.14,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 0.31724137931034485,
+      "forwardPe": 23.072,
+      "normalizedEbitdaB": 4.6345,
+      "evEbitdaMultiple": 12.600000000000001,
+      "forwardFcfB": 2.7944999999999998,
+      "evFcfMultiple": 21.75,
+      "forwardRevenueB": 23,
+      "evSalesMultiple": 2.642625,
+      "fcfMargin": 0.1215,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyBaseline": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "normalizedCashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "netCashB": 61.743,
+      "dilutedSharesB": 13.775779945,
+      "wacc": 0.14,
+      "terminalGrowth": 0.03,
+      "costOfEquity": 0.14,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 0.31724137931034485,
+      "forwardPe": 23.072,
+      "normalizedEbitdaB": 4.6345,
+      "evEbitdaMultiple": 12.600000000000001,
+      "forwardFcfB": 2.7944999999999998,
+      "evFcfMultiple": 21.75,
+      "forwardRevenueB": 23,
+      "evSalesMultiple": 2.642625,
+      "fcfMargin": 0.1215,
+      "sotpSegments": [
+        {
+          "name": "Space segment",
+          "metricValueB": 19.83471074380165,
+          "multiple": 1,
+          "probability": 1,
+          "method": "ebitda_multiple",
+          "layer": "core"
+        },
+        {
+          "name": "Connectivity segment",
+          "metricValueB": 322.1157024793388,
+          "multiple": 1,
+          "probability": 1,
+          "method": "ebitda_multiple",
+          "layer": "core"
+        },
+        {
+          "name": "AI segment",
+          "metricValueB": 636.1607142857142,
+          "multiple": 1,
+          "probability": 1,
+          "method": "ebitda_multiple",
+          "layer": "core"
+        },
+        {
+          "name": "Strategic optionality beyond the segments",
+          "metricValueB": 40,
+          "multiple": 1,
+          "probability": 1,
+          "method": "dcf",
+          "layer": "optionality"
+        },
+        {
+          "name": "Starship scenario tree",
+          "metricValueB": 245.31773958331928,
+          "multiple": 1,
+          "probability": 1,
+          "method": "dcf",
+          "layer": "optionality"
+        }
+      ],
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "legacyThesis": {
+      "growthDelta": 0,
+      "marginDelta": 0,
+      "multipleDelta": 0,
+      "note": "Signal Ledger changes operating assumptions only; it never inserts a target price directly."
+    },
+    "capitalCost": null,
+    "plan": {
+      "primaryMethod": "sotp",
+      "aggregationRule": "single_model",
+      "missingEvidence": [
+        "Reported full fiscal year (the forecast is annualized from the latest interim period)",
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "businesses": [
+        {
+          "id": "b1",
+          "name": "Space Exploration Technologies",
+          "stage": "mature",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": {
+            "formula": "reported_segment",
+            "params": {},
+            "evidenceId": "0001181412-26-000001"
+          },
+          "valuationMethod": "sotp",
+          "disclosedData": [
+            {
+              "label": "Revenue",
+              "value": 23,
+              "unit": "USD billions",
+              "evidenceId": "0001181412-26-000001"
+            }
+          ],
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 23,
+              "margin": 0.1215,
+              "fcfB": 3.2559435039388407
+            },
+            {
+              "year": 2027,
+              "margin": 0.1215,
+              "fcfB": 3.9579819807931056,
+              "growth": 0.21561752407711676
+            },
+            {
+              "year": 2028,
+              "margin": 0.1215,
+              "fcfB": 4.53945595307342,
+              "growth": 0.14691172802252073
+            },
+            {
+              "year": 2029,
+              "margin": 0.1215,
+              "fcfB": 5.018760132183191,
+              "growth": 0.10558626057055576
+            },
+            {
+              "year": 2030,
+              "margin": 0.1215,
+              "fcfB": 5.418262251807731,
+              "growth": 0.07960175603187358
+            },
+            {
+              "year": 2031,
+              "margin": 0.1215,
+              "fcfB": 5.758770187604178,
+              "growth": 0.06284449145717175
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "financing": [],
+      "dilution": [],
+      "capitalRequirements": [],
+      "scenarios": []
+    },
+    "compiledBaseline": {
+      "cashFlowBasis": "cfo_capex_proxy",
+      "cashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "normalizedCashFlows": [
+        3.2559435039388407,
+        3.9579819807931056,
+        4.53945595307342,
+        5.018760132183191,
+        5.418262251807731,
+        5.758770187604178
+      ],
+      "netCashB": 49,
+      "dilutedSharesB": 5.8,
+      "wacc": 0.14,
+      "terminalGrowth": 0.03,
+      "costOfEquity": 0.14,
+      "preTaxCostOfDebt": 0.02,
+      "effectiveTaxRate": 0.21,
+      "taxRateBasis": "statutory",
+      "forwardEps": 0.31724137931034485,
+      "forwardPe": 23.072,
+      "normalizedEbitdaB": 4.6345,
+      "evEbitdaMultiple": 12.600000000000001,
+      "forwardFcfB": 3.2559435039388407,
+      "evFcfMultiple": 21.75,
+      "forwardRevenueB": 23,
+      "evSalesMultiple": 2.642625,
+      "fcfMargin": 0.1215,
+      "sotpSegments": null,
+      "projectNpvAssets": null,
+      "rnpvAssets": null,
+      "otherAssetValueB": null
+    },
+    "compiledClassification": {
+      "modelFamily": "integrated_space_connectivity_ai_platform"
+    },
+    "legacyOutput": {
+      "fairValue": 96.1958,
+      "scenarios": {
+        "bear": 74.64303926390232,
+        "base": 96.19577783493506,
+        "bull": 118.39051287404112
+      },
+      "models": [
+        {
+          "model": "sotp",
+          "label": "Sum of the Parts",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 96.1958,
+          "baseWeight": 0.55,
+          "applicability": 1,
+          "confidence": 0.42,
+          "priorReliability": 0.58,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Values each operating segment on its own driver and multiple, probability-weights optionality, then applies the equity bridge."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 8.8941,
+          "baseWeight": 0.25,
+          "applicability": 1,
+          "confidence": 0.38,
+          "priorReliability": 0.54,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately. Excluded from the ensemble because it is not comparable with the company-specific anchor."
+        },
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 3.0446,
+          "baseWeight": 0.2,
+          "applicability": 1,
+          "confidence": 0.34,
+          "priorReliability": 0.5,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted levered cash flow to equity at the cost of equity, with no enterprise bridge (reported CFO−CapEx levered proxy, discounted at the cost of equity). Excluded from the ensemble because it is not comparable with the company-specific anchor."
+        }
+      ]
+    },
+    "researchOutput": {
+      "fairValue": 96.1958,
+      "status": "high-uncertainty",
+      "scenarios": {
+        "bear": 74.64303926390232,
+        "base": 96.19577783493506,
+        "bull": 118.39051287404112
+      },
+      "probabilityDistribution": {
+        "p10": 78.48710027885664,
+        "p25": 86.26177921290837,
+        "p50": 96.28493359419784,
+        "p75": 107.91050204066734,
+        "p90": 120.01984247236294
+      },
+      "models": [
+        {
+          "model": "sotp",
+          "label": "Sum of the Parts",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 96.1958,
+          "baseWeight": 0.55,
+          "applicability": 1,
+          "confidence": 0.42,
+          "priorReliability": 0.58,
+          "effectiveWeight": 1,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Values each operating segment on its own driver and multiple, probability-weights optionality, then applies the equity bridge."
+        },
+        {
+          "model": "ev_sales",
+          "label": "EV / Sales",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 8.8941,
+          "baseWeight": 0.25,
+          "applicability": 1,
+          "confidence": 0.38,
+          "priorReliability": 0.54,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Forward revenue capitalized at an EV/Sales multiple, with profitability checked separately. Excluded from the ensemble because it is not comparable with the company-specific anchor."
+        },
+        {
+          "model": "dcf",
+          "label": "FCFF DCF",
+          "role": "valuation",
+          "status": "calculated",
+          "value": 3.0446,
+          "baseWeight": 0.2,
+          "applicability": 1,
+          "confidence": 0.34,
+          "priorReliability": 0.5,
+          "effectiveWeight": 0,
+          "missingInputs": [],
+          "diagnostics": null,
+          "explanation": "Discounted levered cash flow to equity at the cost of equity, with no enterprise bridge (reported CFO−CapEx levered proxy, discounted at the cost of equity). Excluded from the ensemble because it is not comparable with the company-specific anchor."
+        }
+      ],
+      "marketImplied": {
+        "headline": "What are launch, connectivity and development optionality worth after probability and liquidity discounts?",
+        "impliedFcfCagr": null,
+        "terminalFcfB": null,
+        "impliedRevenueB": null,
+        "impliedForwardPe": 378.2608695652174,
+        "requiredGrowthPct": null,
+        "requiredMarginPct": null,
+        "requiredRevenueB": 602.1855516389953,
+        "requiredSegmentValueB": 327.921726307826,
+        "requiredSuccessProbability": null
+      },
+      "rating": "WATCH",
+      "riskAdjustedUpside": -0.1319
+    },
+    "orchestration": {
+      "aiCalls": 0,
+      "toolCalls": 0,
+      "usedDeterministicFallback": true,
+      "compilationFailed": true,
+      "capabilityGap": "family integrated_space_connectivity_ai_platform is anchored to sotp; raw evidence lacks the segment/project data required to parameterize it, and no whole-company substitute is legitimate"
+    }
+  }
+}

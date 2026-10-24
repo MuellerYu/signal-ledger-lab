@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "purpose": "Pre-upgrade frozen baseline for the adaptive research engine (Task B). Produced by the UNMODIFIED deterministic engine. Never regenerate with a modified engine.",
+    "frozenAt": "2026-09-21T05:52:03.313Z",
+    "engineVersion": "universal-v9",
+    "tickers": [
+      "OKLO",
+      "AMD",
+      "NVDA",
+      "SPCX"
+    ]
+  },
+  "tickers": {
+    "OKLO": {
+      "ticker": "OKLO",
+      "evidenceDate": "2026-09-21",
+      "quoteAsOf": "Sep 14, 2026 4:00 PM ET",
+      "currentPrice": 60,
+      "modelFamily": "advanced_nuclear_project_npv",
+      "primaryBasis": "ensemble",
+      "publishedModel": "project_npv",
+      "topWeightedModel": "project_npv",
+      "profileVersion": "issuer-registry-2026-09-15",
+      "engineVersion": "universal-v9",
+      "oldPublishedFairValue": 17.013333333333335,
+      "oldExpectedReturn": -0.7164444444444444,
+      "bear": 11.30898069096307,
+      "base": 17.013333333333335,
+      "bull": 26.345431009234407,
+      "probabilityDistribution": {
+        "p10": 11.30898069096307,
+        "p25": 13.500283177150763,
+        "p50": 17.03227342704399,
+        "p75": 21.59605971664433,
+        "p90": 26.345431009234407
+      },
+      "rating": "WATCH",
+      "status": "screening",
+      "confidence": 0.31952102768263435,
+      "valuationScenarios": {
+        "method": "distribution",
+        "bear": 11.30898069096307,
+        "base": 17.03227342704399,
+        "bull": 26.345431009234407
+      },
+      "models": [
+        {
+          "model": "project_npv",
+          "value": 17.013333333333335,
+          "effectiveWeight": 1
+        }
+      ],
+      "baseline": {
+        "cashFlowBasis": "derived_proxy",
+        "cashFlows": null,
+        "normalizedCashFlows": null,
+        "netCashB": 1.1,
+        "dilutedSharesB": 0.15,
+        "wacc": 0.15,
+        "terminalGrowth": 0.025,
+        "forwardRevenueB": null,
+        "forwardEps": null,
+        "forwardFcfB": null,
+        "normalizedEbitdaB": null,
+        "sotpSegments": [],
+        "projectNpvAssets": [
+          {
+            "name": "Licensed and announced reactor projects at delivery milestones",
+            "npvB": 3.5200000000000005,
+            "probability": 0.3
+          },
+          {
+            "name": "Early-stage development pipeline and fuel optionality",
+            "npvB": 2.64,
+            "probability": 0.15
+          }
+        ],
+        "otherAssetValueB": 1.1
+      },
+      "sourcePosture": "reported_internal_forecast",
+      "dataQuality": {
+        "status": "warning",
+        "valuationRelease": "screening_only"
+      }
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "evidenceDate": "2026-09-11",
+      "quoteAsOf": "Sep 14, 2026 4:00 PM ET",
+      "currentPrice": 210,
+      "modelFamily": "ai_semiconductor",
+      "primaryBasis": "ensemble",
+      "publishedModel": "dcf",
+      "topWeightedModel": "dcf",
+      "profileVersion": "issuer-registry-2026-09-15",
+      "engineVersion": "universal-v9",
+      "oldPublishedFairValue": 451.4865632471788,
+      "oldExpectedReturn": 1.1499360154627563,
+      "bear": 338.51871030710146,
+      "base": 451.4865632471788,
+      "bull": 615.9958152665839,
+      "probabilityDistribution": {
+        "p10": 338.51871030710146,
+        "p25": 388.84920858914234,
+        "p50": 453.79911918949347,
+        "p75": 531.6099861092753,
+        "p90": 615.9958152665839
+      },
+      "rating": "STRONG BUY",
+      "status": "provisional",
+      "confidence": 0.6272284658116393,
+      "valuationScenarios": {
+        "method": "distribution",
+        "bear": 338.51871030710146,
+        "base": 453.79911918949347,
+        "bull": 615.9958152665839
+      },
+      "models": [
+        {
+          "model": "dcf",
+          "value": 418.08914486586104,
+          "effectiveWeight": 0.4023383768913342
+        },
+        {
+          "model": "forward_pe",
+          "value": 499.52,
+          "effectiveWeight": 0.27223750573131594
+        },
+        {
+          "model": "ev_fcf",
+          "value": 447.233455882353,
+          "effectiveWeight": 0.2135488308115543
+        },
+        {
+          "model": "ev_sales",
+          "value": 462.82781862745105,
+          "effectiveWeight": 0.11187528656579548
+        }
+      ],
+      "baseline": {
+        "cashFlowBasis": "analyst_fcff",
+        "cashFlows": [
+          16,
+          30,
+          36,
+          43,
+          52,
+          63
+        ],
+        "normalizedCashFlows": null,
+        "netCashB": 9.885,
+        "dilutedSharesB": 1.632,
+        "wacc": 0.105,
+        "terminalGrowth": 0.035,
+        "forwardRevenueB": 87.7,
+        "forwardEps": 15.61,
+        "forwardFcfB": 30,
+        "normalizedEbitdaB": null,
+        "sotpSegments": [],
+        "projectNpvAssets": [],
+        "otherAssetValueB": null
+      },
+      "sourcePosture": "analyst_estimate",
+      "dataQuality": {
+        "status": "warning",
+        "valuationRelease": "screening_only"
+      }
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "evidenceDate": "2026-12-31",
+      "quoteAsOf": "Sep 14, 2026 4:00 PM ET",
+      "currentPrice": 180,
+      "modelFamily": "ai_compute_platform",
+      "primaryBasis": "ensemble",
+      "publishedModel": "dcf",
+      "topWeightedModel": "dcf",
+      "profileVersion": "issuer-registry-2026-09-15",
+      "engineVersion": "universal-v9",
+      "oldPublishedFairValue": 157.48980806342945,
+      "oldExpectedReturn": -0.12505662186983635,
+      "bear": 110.18595926873716,
+      "base": 157.48980806342945,
+      "bull": 235.20367322050288,
+      "probabilityDistribution": {
+        "p10": 110.18595926873716,
+        "p25": 130.5118672776946,
+        "p50": 158.48498661383826,
+        "p75": 193.98294890183942,
+        "p90": 235.20367322050288
+      },
+      "rating": "WATCH",
+      "status": "provisional",
+      "confidence": 0.4957804332514382,
+      "valuationScenarios": {
+        "method": "distribution",
+        "bear": 110.18595926873716,
+        "base": 158.48498661383826,
+        "bull": 235.20367322050288
+      },
+      "models": [
+        {
+          "model": "dcf",
+          "value": 207.93780578075595,
+          "effectiveWeight": 0.4725231175693527
+        },
+        {
+          "model": "forward_pe",
+          "value": 89.58654545454547,
+          "effectiveWeight": 0.4066050198150594
+        },
+        {
+          "model": "ev_sales",
+          "value": 188.69609710743805,
+          "effectiveWeight": 0.12087186261558784
+        }
+      ],
+      "baseline": {
+        "cashFlowBasis": "cfo_capex_proxy",
+        "cashFlows": [
+          10.482535104935353,
+          12.857316807248347,
+          15.014006888068765,
+          16.971392629145434,
+          18.756287488359078,
+          20.397699573744532
+        ],
+        "normalizedCashFlows": [
+          10.482535104935353,
+          12.857316807248347,
+          15.014006888068765,
+          16.971392629145434,
+          18.756287488359078,
+          20.397699573744532
+        ],
+        "netCashB": 9,
+        "dilutedSharesB": 1.2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.035,
+        "forwardRevenueB": 28.713636363636365,
+        "forwardEps": 3.445636363636364,
+        "forwardFcfB": 9.059804855371901,
+        "normalizedEbitdaB": 11.356895764462811,
+        "sotpSegments": [],
+        "projectNpvAssets": [],
+        "otherAssetValueB": null
+      },
+      "sourcePosture": "reported_internal_forecast",
+      "dataQuality": {
+        "status": "warning",
+        "valuationRelease": "screening_only"
+      }
+    },
+    "SPCX": {
+      "ticker": "SPCX",
+      "evidenceDate": "2026-08-04",
+      "quoteAsOf": "Sep 14, 2026 4:00 PM ET",
+      "currentPrice": 120,
+      "modelFamily": "integrated_space_connectivity_ai_platform",
+      "primaryBasis": "reconciled_segment_sotp",
+      "publishedModel": "sotp",
+      "topWeightedModel": "sotp",
+      "profileVersion": "issuer-registry-2026-09-15",
+      "engineVersion": "universal-v9",
+      "oldPublishedFairValue": 96.19577783493506,
+      "oldExpectedReturn": -0.1983685180422079,
+      "bear": 74.64303926390232,
+      "base": 96.19577783493506,
+      "bull": 118.39051287404112,
+      "probabilityDistribution": {
+        "p10": 78.48710027885664,
+        "p25": 86.26177921290837,
+        "p50": 96.28493359419784,
+        "p75": 107.91050204066734,
+        "p90": 120.01984247236294
+      },
+      "rating": "WATCH",
+      "status": "high-uncertainty",
+      "confidence": 0.665,
+      "valuationScenarios": {
+        "method": "segment_sotp",
+        "bear": 74.64303926390232,
+        "base": 96.19577783493506,
+        "bull": 118.39051287404112
+      },
+      "models": [
+        {
+          "model": "sotp",
+          "value": 96.19577783493506,
+          "effectiveWeight": 1
+        },
+        {
+          "model": "ev_sales",
+          "value": 8.894115287060067,
+          "effectiveWeight": 0
+        },
+        {
+          "model": "dcf",
+          "value": 3.044578444142531,
+          "effectiveWeight": 0
+        }
+      ],
+      "baseline": {
+        "cashFlowBasis": "cfo_capex_proxy",
+        "cashFlows": [
+          3.2559435039388407,
+          3.9579819807931056,
+          4.53945595307342,
+          5.018760132183191,
+          5.418262251807731,
+          5.758770187604178
+        ],
+        "normalizedCashFlows": [
+          3.2559435039388407,
+          3.9579819807931056,
+          4.53945595307342,
+          5.018760132183191,
+          5.418262251807731,
+          5.758770187604178
+        ],
+        "netCashB": 61.743,
+        "dilutedSharesB": 13.775779945,
+        "wacc": 0.14,
+        "terminalGrowth": 0.03,
+        "forwardRevenueB": 23,
+        "forwardEps": 0.31724137931034485,
+        "forwardFcfB": 2.7944999999999998,
+        "normalizedEbitdaB": 4.6345,
+        "sotpSegments": [
+          {
+            "name": "Space segment",
+            "metricValueB": 19.83471074380165,
+            "multiple": 1,
+            "probability": 1
+          },
+          {
+            "name": "Connectivity segment",
+            "metricValueB": 322.1157024793388,
+            "multiple": 1,
+            "probability": 1
+          },
+          {
+            "name": "AI segment",
+            "metricValueB": 636.1607142857142,
+            "multiple": 1,
+            "probability": 1
+          },
+          {
+            "name": "Strategic optionality beyond the segments",
+            "metricValueB": 40,
+            "multiple": 1,
+            "probability": 1
+          },
+          {
+            "name": "Starship scenario tree",
+            "metricValueB": 245.31773958331928,
+            "multiple": 1,
+            "probability": 1
+          }
+        ],
+        "projectNpvAssets": [],
+        "otherAssetValueB": null
+      },
+      "sourcePosture": "reported_internal_forecast",
+      "dataQuality": {
+        "status": "warning",
+        "valuationRelease": "screening_only"
+      }
+    }
+  }
+}

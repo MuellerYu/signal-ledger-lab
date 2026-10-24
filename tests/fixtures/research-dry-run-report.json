@@ -1,0 +1,756 @@
+{
+  "meta": {
+    "purpose": "Production-isolated dry-run acceptance audit for the adaptive research engine (Task B). AI disabled → deterministic fallback; no production D1 writes or claimAiCall quota.",
+    "generatedAt": "2026-09-21T06:56:02.138Z",
+    "engineVersion": "universal-v9",
+    "tickers": [
+      "AMD",
+      "NVDA",
+      "OKLO",
+      "SPCX"
+    ]
+  },
+  "tickers": {
+    "AMD": {
+      "ticker": "AMD",
+      "currentPrice": 210,
+      "modelFamily": "ai_semiconductor",
+      "A": {
+        "oldFairValue": 451.49,
+        "oldBear": 338.52,
+        "oldBase": 451.49,
+        "oldBull": 616,
+        "oldPublishedModel": "dcf"
+      },
+      "B": {
+        "bear": 338.52,
+        "base": 451.49,
+        "bull": 616,
+        "publishedFairValue": 451.49,
+        "publishedModel": null,
+        "rating": "STRONG BUY"
+      },
+      "C_businessGraph": [
+        {
+          "id": "b1",
+          "name": "Advanced Micro Devices",
+          "stage": "mature",
+          "economicMeaning": "Advanced Micro Devices company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "sotp",
+          "multiple": null,
+          "currentRevenueB": 28.413636363636364,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.413636363636364,
+              "margin": 0.2540227272727273,
+              "fcfB": 7.217709400826447,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "D_perBusiness": [
+        {
+          "id": "b1",
+          "name": "Advanced Micro Devices",
+          "stage": "mature",
+          "economicMeaning": "Advanced Micro Devices company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "sotp",
+          "multiple": null,
+          "currentRevenueB": 28.413636363636364,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.413636363636364,
+              "margin": 0.2540227272727273,
+              "fcfB": 7.217709400826447,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "E_primaryMethod": "sotp",
+      "F_crossChecks": [],
+      "G_aggregationRule": "single_model",
+      "H_evidenceSources": [
+        {
+          "id": "deterministic-evidence",
+          "kind": "filing",
+          "label": "Latest SEC filing evidence.",
+          "asOf": "unconnected"
+        }
+      ],
+      "I_missingEvidence": [
+        "Live consensus estimates",
+        "A filing-linked multi-year FCFF bridge",
+        "A comparable-company multiple set",
+        "沿用 2026-09-11 研究假设；AMD latest 10-Q did not expose a machine-readable segment revenue table, so the company-specific segment SOTP could not be rebuilt，以下输入仍待补充：Live sell-side consensus and revision history、Company-specific management guidance normalization、Peer-regression and sector KPI pack"
+      ],
+      "J_checks": [
+        {
+          "id": "unit-metric-b1",
+          "label": "Operating basis for Advanced Micro Devices",
+          "status": "passed",
+          "detail": "Advanced Micro Devices valued from a revenue basis of $28.41B."
+        },
+        {
+          "id": "period-order-b1",
+          "label": "Forecast period order for Advanced Micro Devices",
+          "status": "passed",
+          "detail": "Advanced Micro Devices forecast years are strictly increasing."
+        },
+        {
+          "id": "dilution-basis",
+          "label": "Dilution share-count basis",
+          "status": "passed",
+          "detail": "0.00B shares of dilution on a 1.20B base."
+        },
+        {
+          "id": "financing-cost-basis",
+          "label": "Financing cost basis",
+          "status": "passed",
+          "detail": "All financing costs are expressed as rates in [0, 1]."
+        },
+        {
+          "id": "profit-vs-cashflow-basis",
+          "label": "Profit vs cash-flow basis",
+          "status": "passed",
+          "detail": "Profit-multiple segments are anchored to a profit metric, and cash-flow segments to a cash-flow basis."
+        },
+        {
+          "id": "segment-overlap",
+          "label": "Segment overlap / duplication",
+          "status": "passed",
+          "detail": "No business declares an overlap with another; no disclosed revenue is double-counted."
+        },
+        {
+          "id": "terminal-overlap",
+          "label": "Terminal value double-count",
+          "status": "passed",
+          "detail": "Terminal value is attributed once (segment-level SOTP or a single company model)."
+        },
+        {
+          "id": "funding-gap",
+          "label": "Capital funding gap",
+          "status": "passed",
+          "detail": "Committed capital $0.00B is covered by financing and internal cash."
+        },
+        {
+          "id": "scenario-probability-sum",
+          "label": "Company scenario probability sum",
+          "status": "passed",
+          "detail": "Company scenarios sum to 0.000 (≤ 1)."
+        },
+        {
+          "id": "scenario-exclusivity",
+          "label": "Scenario mutual exclusivity",
+          "status": "passed",
+          "detail": "Company scenarios are mutually exclusive over businesses."
+        },
+        {
+          "id": "probability-double-count",
+          "label": "Probability ownership (no double count)",
+          "status": "passed",
+          "detail": "Every uncertainty's probability is owned by exactly one segment or one scenario."
+        },
+        {
+          "id": "compilation-completeness",
+          "label": "Capital / financing / dilution compiled",
+          "status": "passed",
+          "detail": "Every capital, financing and dilution entry reached the valuation profile."
+        }
+      ],
+      "K_reviewerRevisions": [],
+      "L_bridge": {
+        "oldFairValue": 451.49,
+        "newFairValue": 451.49,
+        "delta": 0,
+        "segmentationChange": null,
+        "growthChange": null,
+        "marginNormalization": null,
+        "optionality": null,
+        "minusCapex": 0,
+        "minusFinancing": 0,
+        "minusDilution": 0,
+        "minusFailureProbability": 0,
+        "minusMultipleNormalization": null,
+        "note": "Deterministic fallback could not value this issuer from raw evidence (asset- or segment-curated family), so runResearchValuation fell back to the legacy deterministic path (rule B); old == new by construction."
+      },
+      "orchestration": {
+        "policyVersion": "2026-09-21.1",
+        "evidenceVersion": "9b531d9f",
+        "assumptionVersion": "78b581cc",
+        "cached": false,
+        "aiCalls": 0,
+        "toolCalls": 0,
+        "usedDeterministicFallback": true,
+        "compilationFailed": true,
+        "productionD1Mutations": 0
+      }
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "currentPrice": 180,
+      "modelFamily": "ai_compute_platform",
+      "A": {
+        "oldFairValue": 157.49,
+        "oldBear": 110.19,
+        "oldBase": 157.49,
+        "oldBull": 235.2,
+        "oldPublishedModel": "dcf"
+      },
+      "B": {
+        "bear": 87.75,
+        "base": 116.15,
+        "bull": 154.49,
+        "publishedFairValue": 116.15,
+        "publishedModel": null,
+        "rating": "WATCH"
+      },
+      "C_businessGraph": [
+        {
+          "id": "b1",
+          "name": "NVIDIA",
+          "stage": "mature",
+          "economicMeaning": "NVIDIA company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "dcf",
+          "multiple": null,
+          "currentRevenueB": 28.713636363636365,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.713636363636365,
+              "margin": 0.3155227272727273,
+              "fcfB": 9.059804855371901,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "D_perBusiness": [
+        {
+          "id": "b1",
+          "name": "NVIDIA",
+          "stage": "mature",
+          "economicMeaning": "NVIDIA company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "dcf",
+          "multiple": null,
+          "currentRevenueB": 28.713636363636365,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 28.713636363636365,
+              "margin": 0.3155227272727273,
+              "fcfB": 9.059804855371901,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "E_primaryMethod": "dcf",
+      "F_crossChecks": [],
+      "G_aggregationRule": "single_model",
+      "H_evidenceSources": [
+        {
+          "id": "deterministic-evidence",
+          "kind": "filing",
+          "label": "Latest SEC filing evidence.",
+          "asOf": "unconnected"
+        }
+      ],
+      "I_missingEvidence": [
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "J_checks": [
+        {
+          "id": "unit-metric-b1",
+          "label": "Operating basis for NVIDIA",
+          "status": "passed",
+          "detail": "NVIDIA valued from a fcf basis of $9.06B."
+        },
+        {
+          "id": "period-order-b1",
+          "label": "Forecast period order for NVIDIA",
+          "status": "passed",
+          "detail": "NVIDIA forecast years are strictly increasing."
+        },
+        {
+          "id": "dilution-basis",
+          "label": "Dilution share-count basis",
+          "status": "passed",
+          "detail": "0.00B shares of dilution on a 1.20B base."
+        },
+        {
+          "id": "financing-cost-basis",
+          "label": "Financing cost basis",
+          "status": "passed",
+          "detail": "All financing costs are expressed as rates in [0, 1]."
+        },
+        {
+          "id": "profit-vs-cashflow-basis",
+          "label": "Profit vs cash-flow basis",
+          "status": "passed",
+          "detail": "Profit-multiple segments are anchored to a profit metric, and cash-flow segments to a cash-flow basis."
+        },
+        {
+          "id": "segment-overlap",
+          "label": "Segment overlap / duplication",
+          "status": "passed",
+          "detail": "No business declares an overlap with another; no disclosed revenue is double-counted."
+        },
+        {
+          "id": "terminal-overlap",
+          "label": "Terminal value double-count",
+          "status": "passed",
+          "detail": "Terminal value is attributed once (segment-level SOTP or a single company model)."
+        },
+        {
+          "id": "funding-gap",
+          "label": "Capital funding gap",
+          "status": "passed",
+          "detail": "Committed capital $0.00B is covered by financing and internal cash."
+        },
+        {
+          "id": "scenario-probability-sum",
+          "label": "Company scenario probability sum",
+          "status": "passed",
+          "detail": "Company scenarios sum to 0.000 (≤ 1)."
+        },
+        {
+          "id": "scenario-exclusivity",
+          "label": "Scenario mutual exclusivity",
+          "status": "passed",
+          "detail": "Company scenarios are mutually exclusive over businesses."
+        },
+        {
+          "id": "probability-double-count",
+          "label": "Probability ownership (no double count)",
+          "status": "passed",
+          "detail": "Every uncertainty's probability is owned by exactly one segment or one scenario."
+        },
+        {
+          "id": "compilation-completeness",
+          "label": "Capital / financing / dilution compiled",
+          "status": "passed",
+          "detail": "Every capital, financing and dilution entry reached the valuation profile."
+        }
+      ],
+      "K_reviewerRevisions": [],
+      "L_bridge": {
+        "oldFairValue": 157.49,
+        "newFairValue": 116.15,
+        "delta": -41.34,
+        "segmentationChange": null,
+        "growthChange": null,
+        "marginNormalization": null,
+        "optionality": null,
+        "minusCapex": 0,
+        "minusFinancing": 0,
+        "minusDilution": 0,
+        "minusFailureProbability": 0,
+        "minusMultipleNormalization": null,
+        "note": "Deterministic fallback (AI disabled in the isolated dry-run): a single company-level business with no capital/financing/dilution/scenario probability, so all additive bridge components are zero; the full delta is the legacy-ensemble → deterministic-single-business method/aggregation normalization."
+      },
+      "orchestration": {
+        "policyVersion": "2026-09-21.1",
+        "evidenceVersion": "5c2a0adf",
+        "assumptionVersion": "e4b7997e",
+        "cached": false,
+        "aiCalls": 0,
+        "toolCalls": 0,
+        "usedDeterministicFallback": true,
+        "compilationFailed": false,
+        "productionD1Mutations": 0
+      }
+    },
+    "OKLO": {
+      "ticker": "OKLO",
+      "currentPrice": 60,
+      "modelFamily": "advanced_nuclear_project_npv",
+      "A": {
+        "oldFairValue": 17.01,
+        "oldBear": 11.31,
+        "oldBase": 17.01,
+        "oldBull": 26.35,
+        "oldPublishedModel": "project_npv"
+      },
+      "B": {
+        "bear": 11.31,
+        "base": 17.01,
+        "bull": 26.35,
+        "publishedFairValue": 17.01,
+        "publishedModel": null,
+        "rating": "WATCH"
+      },
+      "C_businessGraph": [
+        {
+          "id": "b1",
+          "name": "Oklo",
+          "stage": "mature",
+          "economicMeaning": "Oklo company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "project_npv",
+          "multiple": null,
+          "currentRevenueB": null,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": null,
+              "margin": 0.14,
+              "fcfB": null,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "D_perBusiness": [
+        {
+          "id": "b1",
+          "name": "Oklo",
+          "stage": "mature",
+          "economicMeaning": "Oklo company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "project_npv",
+          "multiple": null,
+          "currentRevenueB": null,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": null,
+              "margin": 0.14,
+              "fcfB": null,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "E_primaryMethod": "project_npv",
+      "F_crossChecks": [],
+      "G_aggregationRule": "single_model",
+      "H_evidenceSources": [
+        {
+          "id": "deterministic-evidence",
+          "kind": "filing",
+          "label": "Latest SEC filing evidence.",
+          "asOf": "unconnected"
+        }
+      ],
+      "I_missingEvidence": [
+        "Reported full fiscal year (the forecast is annualized from the latest interim period)",
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "J_checks": [
+        {
+          "id": "unit-metric-b1",
+          "label": "Operating basis for Oklo",
+          "status": "failed",
+          "detail": "Oklo has no operating base: its metric value is 0."
+        },
+        {
+          "id": "period-order-b1",
+          "label": "Forecast period order for Oklo",
+          "status": "passed",
+          "detail": "Oklo forecast years are strictly increasing."
+        },
+        {
+          "id": "dilution-basis",
+          "label": "Dilution share-count basis",
+          "status": "passed",
+          "detail": "0.00B shares of dilution on a 0.15B base."
+        },
+        {
+          "id": "financing-cost-basis",
+          "label": "Financing cost basis",
+          "status": "passed",
+          "detail": "All financing costs are expressed as rates in [0, 1]."
+        },
+        {
+          "id": "profit-vs-cashflow-basis",
+          "label": "Profit vs cash-flow basis",
+          "status": "passed",
+          "detail": "Profit-multiple segments are anchored to a profit metric, and cash-flow segments to a cash-flow basis."
+        },
+        {
+          "id": "segment-overlap",
+          "label": "Segment overlap / duplication",
+          "status": "passed",
+          "detail": "No business declares an overlap with another; no disclosed revenue is double-counted."
+        },
+        {
+          "id": "terminal-overlap",
+          "label": "Terminal value double-count",
+          "status": "passed",
+          "detail": "Terminal value is attributed once (segment-level SOTP or a single company model)."
+        },
+        {
+          "id": "funding-gap",
+          "label": "Capital funding gap",
+          "status": "passed",
+          "detail": "Committed capital $0.00B is covered by financing and internal cash."
+        },
+        {
+          "id": "scenario-probability-sum",
+          "label": "Company scenario probability sum",
+          "status": "passed",
+          "detail": "Company scenarios sum to 0.000 (≤ 1)."
+        },
+        {
+          "id": "scenario-exclusivity",
+          "label": "Scenario mutual exclusivity",
+          "status": "passed",
+          "detail": "Company scenarios are mutually exclusive over businesses."
+        },
+        {
+          "id": "probability-double-count",
+          "label": "Probability ownership (no double count)",
+          "status": "passed",
+          "detail": "Every uncertainty's probability is owned by exactly one segment or one scenario."
+        },
+        {
+          "id": "compilation-completeness",
+          "label": "Capital / financing / dilution compiled",
+          "status": "passed",
+          "detail": "Every capital, financing and dilution entry reached the valuation profile."
+        }
+      ],
+      "K_reviewerRevisions": [],
+      "L_bridge": {
+        "oldFairValue": 17.01,
+        "newFairValue": 17.01,
+        "delta": 0,
+        "segmentationChange": null,
+        "growthChange": null,
+        "marginNormalization": null,
+        "optionality": null,
+        "minusCapex": 0,
+        "minusFinancing": 0,
+        "minusDilution": 0,
+        "minusFailureProbability": 0,
+        "minusMultipleNormalization": null,
+        "note": "Deterministic fallback could not value this issuer from raw evidence (asset- or segment-curated family), so runResearchValuation fell back to the legacy deterministic path (rule B); old == new by construction."
+      },
+      "orchestration": {
+        "policyVersion": "2026-09-21.1",
+        "evidenceVersion": "69674f85",
+        "assumptionVersion": "9851df40",
+        "cached": false,
+        "aiCalls": 0,
+        "toolCalls": 0,
+        "usedDeterministicFallback": true,
+        "compilationFailed": true,
+        "productionD1Mutations": 0
+      }
+    },
+    "SPCX": {
+      "ticker": "SPCX",
+      "currentPrice": 120,
+      "modelFamily": "integrated_space_connectivity_ai_platform",
+      "A": {
+        "oldFairValue": 96.2,
+        "oldBear": 74.64,
+        "oldBase": 96.2,
+        "oldBull": 118.39,
+        "oldPublishedModel": "sotp"
+      },
+      "B": {
+        "bear": 74.64,
+        "base": 96.2,
+        "bull": 118.39,
+        "publishedFairValue": 96.2,
+        "publishedModel": "sotp",
+        "rating": "WATCH"
+      },
+      "C_businessGraph": [
+        {
+          "id": "b1",
+          "name": "Space Exploration Technologies",
+          "stage": "mature",
+          "economicMeaning": "Space Exploration Technologies company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "sotp",
+          "multiple": null,
+          "currentRevenueB": 23,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 23,
+              "margin": 0.1215,
+              "fcfB": 2.7944999999999998,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "D_perBusiness": [
+        {
+          "id": "b1",
+          "name": "Space Exploration Technologies",
+          "stage": "mature",
+          "economicMeaning": "Space Exploration Technologies company-level operating economics compiled from reported evidence.",
+          "segmentationBasis": "reported_segment",
+          "revenueDriver": "reported_segment",
+          "valuationMethod": "sotp",
+          "multiple": null,
+          "currentRevenueB": 23,
+          "forecastYears": [
+            {
+              "year": 2026,
+              "revenueB": 23,
+              "margin": 0.1215,
+              "fcfB": 2.7944999999999998,
+              "growth": null
+            }
+          ],
+          "rationale": "Deterministic fallback: a single company-level business compiled from the evidence baseline; no AI assumption was applied."
+        }
+      ],
+      "E_primaryMethod": "sotp",
+      "F_crossChecks": [],
+      "G_aggregationRule": "single_model",
+      "H_evidenceSources": [
+        {
+          "id": "0001181412-26-000001",
+          "kind": "filing",
+          "label": "Latest SEC filing evidence.",
+          "asOf": "unconnected"
+        }
+      ],
+      "I_missingEvidence": [
+        "Reported full fiscal year (the forecast is annualized from the latest interim period)",
+        "Live sell-side consensus and revision history",
+        "Company-specific management guidance normalization",
+        "Peer-regression and sector KPI pack"
+      ],
+      "J_checks": [
+        {
+          "id": "unit-metric-b1",
+          "label": "Operating basis for Space Exploration Technologies",
+          "status": "passed",
+          "detail": "Space Exploration Technologies valued from a revenue basis of $23.00B."
+        },
+        {
+          "id": "period-order-b1",
+          "label": "Forecast period order for Space Exploration Technologies",
+          "status": "passed",
+          "detail": "Space Exploration Technologies forecast years are strictly increasing."
+        },
+        {
+          "id": "dilution-basis",
+          "label": "Dilution share-count basis",
+          "status": "passed",
+          "detail": "0.00B shares of dilution on a 5.80B base."
+        },
+        {
+          "id": "financing-cost-basis",
+          "label": "Financing cost basis",
+          "status": "passed",
+          "detail": "All financing costs are expressed as rates in [0, 1]."
+        },
+        {
+          "id": "profit-vs-cashflow-basis",
+          "label": "Profit vs cash-flow basis",
+          "status": "passed",
+          "detail": "Profit-multiple segments are anchored to a profit metric, and cash-flow segments to a cash-flow basis."
+        },
+        {
+          "id": "segment-overlap",
+          "label": "Segment overlap / duplication",
+          "status": "passed",
+          "detail": "No business declares an overlap with another; no disclosed revenue is double-counted."
+        },
+        {
+          "id": "terminal-overlap",
+          "label": "Terminal value double-count",
+          "status": "passed",
+          "detail": "Terminal value is attributed once (segment-level SOTP or a single company model)."
+        },
+        {
+          "id": "funding-gap",
+          "label": "Capital funding gap",
+          "status": "passed",
+          "detail": "Committed capital $0.00B is covered by financing and internal cash."
+        },
+        {
+          "id": "scenario-probability-sum",
+          "label": "Company scenario probability sum",
+          "status": "passed",
+          "detail": "Company scenarios sum to 0.000 (≤ 1)."
+        },
+        {
+          "id": "scenario-exclusivity",
+          "label": "Scenario mutual exclusivity",
+          "status": "passed",
+          "detail": "Company scenarios are mutually exclusive over businesses."
+        },
+        {
+          "id": "probability-double-count",
+          "label": "Probability ownership (no double count)",
+          "status": "passed",
+          "detail": "Every uncertainty's probability is owned by exactly one segment or one scenario."
+        },
+        {
+          "id": "compilation-completeness",
+          "label": "Capital / financing / dilution compiled",
+          "status": "passed",
+          "detail": "Every capital, financing and dilution entry reached the valuation profile."
+        }
+      ],
+      "K_reviewerRevisions": [],
+      "L_bridge": {
+        "oldFairValue": 96.2,
+        "newFairValue": 96.2,
+        "delta": 0,
+        "segmentationChange": null,
+        "growthChange": null,
+        "marginNormalization": null,
+        "optionality": null,
+        "minusCapex": 0,
+        "minusFinancing": 0,
+        "minusDilution": 0,
+        "minusFailureProbability": 0,
+        "minusMultipleNormalization": null,
+        "note": "Deterministic fallback could not value this issuer from raw evidence (asset- or segment-curated family), so runResearchValuation fell back to the legacy deterministic path (rule B); old == new by construction."
+      },
+      "orchestration": {
+        "policyVersion": "2026-09-21.1",
+        "evidenceVersion": "be807c8d",
+        "assumptionVersion": "a63f84c4",
+        "cached": false,
+        "aiCalls": 0,
+        "toolCalls": 0,
+        "usedDeterministicFallback": true,
+        "compilationFailed": true,
+        "productionD1Mutations": 0
+      }
+    }
+  },
+  "proof": {
+    "productionD1Mutations": 0,
+    "totalAiCalls": 0,
+    "allDeterministicFallback": true,
+    "conclusion": "Production D1 mutations = 0 — PASS"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "policyVersion": "2026-09-21.1",
+  "businesses": [
+    {
+      "id": "nvda-ai-compute-platform",
+      "name": "NVIDIA accelerated-computing platform",
+      "stage": "scaling",
+      "economicMeaning": "A scaling platform business spanning accelerator silicon, networking and software, with value driven by accelerator demand, networking adoption, software mix and free-cash-flow durability.",
+      "segmentationBasis": "Company-level operating model; segment-level disclosure and cost allocation are pending tool retrieval.",
+      "revenueDriver": {
+        "formula": "constant",
+        "params": {
+          "value": 433.05220759838045
+        },
+        "evidenceId": "evidence:0e47651a",
+        "note": "Uses the supplied forward revenue baseline as a placeholder pending reported segment and KPI disclosure; not treated as a permanent growth assumption."
+      },
+      "costDrivers": [
+        {
+          "formula": "revenue_x_margin",
+          "params": {
+            "revenueB": 433.05220759838045
+          },
+          "evidenceId": "evidence:0e47651a",
+          "note": "Forward FCF is supplied as revenue multiplied by a normalized FCF margin; detailed cost-driver disclosure is pending."
+        }
+      ],
+      "disclosedData": [
+        {
+          "label": "Forward revenue",
+          "value": 433.05220759838045,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "Forward free cash flow",
+          "value": 186.98756020274703,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "Normalized EBITDA",
+          "value": 181.8819271913198,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "FCF margin",
+          "value": 0.4317898787301929,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "Net cash",
+          "value": 38.199,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "Diluted shares",
+          "value": 24.285,
+          "unit": "billions",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "WACC",
+          "value": 0.1,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "label": "Terminal growth",
+          "value": 0.035,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a"
+        }
+      ],
+      "forecastAssumptions": [
+        {
+          "id": "nvda-forward-revenue",
+          "field": "forwardRevenueB",
+          "value": 433.05220759838045,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a",
+          "rationale": "Supplied internal forecast based on historical growth with sector mean reversion."
+        },
+        {
+          "id": "nvda-forward-fcf",
+          "field": "forwardFcfB",
+          "value": 186.98756020274703,
+          "unit": "USD billions",
+          "evidenceId": "evidence:0e47651a",
+          "rationale": "Supplied internal forecast based on forward revenue and normalized FCF margin."
+        },
+        {
+          "id": "nvda-wacc",
+          "field": "wacc",
+          "value": 0.1,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a",
+          "rationale": "Supplied model-family discount-rate policy."
+        },
+        {
+          "id": "nvda-terminal-growth",
+          "field": "terminalGrowth",
+          "value": 0.035,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a",
+          "rationale": "Supplied model-family long-run growth policy."
+        },
+        {
+          "id": "nvda-effective-tax-rate",
+          "field": "effectiveTaxRate",
+          "value": 0.1326494180372742,
+          "unit": "ratio",
+          "evidenceId": "evidence:0e47651a",
+          "rationale": "Supplied book effective tax rate; cash-tax disclosure is unavailable."
+        }
+      ],
+      "growthConstraints": [
+        {
+          "id": "nvda-growth-evidence-bound",
+          "field": "operating-growth",
+          "min": -1,
+          "max": 1,
+          "rationale": "Bound forecast growth until company-specific management guidance and segment KPIs are retrieved; no unsupported permanent growth uplift is applied.",
+          "evidenceId": "evidence:0e47651a"
+        },
+        {
+          "id": "nvda-terminal-growth-bound",
+          "field": "terminal-growth",
+          "min": 0,
+          "max": 0.035,
+          "rationale": "Terminal growth is capped at the supplied policy assumption.",
+          "evidenceId": "evidence:0e47651a"
+        }
+      ],
+      "forecastYears": [
+        {
+          "year": 1,
+          "growth": 0,
+          "margin": 0.4317898787301929,
+          "revenueB": 433.05220759838045,
+          "capexB": 0,
+          "fcfB": 186.98756020274703
+        }
+      ],
+      "valuationMethod": "normalized_dcf",
+      "multiple": null,
+      "rationale": "Use normalized DCF as the primary operating-capability method because the supplied evidence includes a complete unlevered FCFF bridge and six cash-flow observations. Current operating value and future ramp potential should remain separate until segment disclosure, guidance and KPI evidence are retrieved.",
+      "applicabilityConditions": [
+        "FCFF bridge remains complete and internally consistent.",
+        "WACC and terminal growth remain policy-supported rather than price-derived.",
+        "Future capacity, penetration and software-mix upside is not credited without company-specific evidence.",
+        "Net cash and dilution are incorporated separately from operating value."
+      ],
+      "overlaps": [
+        "Do not combine normalized DCF with the supplied EV/FCF, EV/EBITDA or EV/Sales guardrails without an explicit ensemble rule.",
+        "Do not add separate accelerator, networking or software optionality until segment economics and required investment are evidenced."
+      ]
+    }
+  ],
+  "capitalRequirements": [],
+  "financing": [],
+  "dilution": [],
+  "valuationMethods": [
+    {
+      "model": "normalized_dcf",
+      "appliesToBusinessIds": [
+        "nvda-ai-compute-platform"
+      ],
+      "multiple": null,
+      "rationale": "Primary method supported by the supplied FCFF bridge and normalized cash-flow series; no price-based calibration is used.",
+      "evidenceId": "evidence:0e47651a"
+    }
+  ],
+  "scenarios": [],
+  "probabilitiesCheck": {
+    "owners": [],
+    "note": "No optionality scenarios are specified because the supplied evidence does not quantify distinct commercial outcomes, required capital, financing or dilution."
+  },
+  "sources": [
+    {
+      "id": "0001045810-26-000075",
+      "kind": "filing",
+      "label": "NVIDIA latest SEC filing",
+      "asOf": "2026-08-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+    },
+    {
+      "id": "evidence:0e47651a",
+      "kind": "tool_result",
+      "label": "Supplied NVIDIA operating baseline and derived forecast inputs",
+      "asOf": "2026-08-26",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json"
+    }
+  ],
+  "missingEvidence": [
+    "Company-specific management guidance normalization",
+    "Reported segment revenue, costs and capex",
+    "Peer-regression and sector KPI pack",
+    "Explicit capacity-ramp, penetration and software-mix evidence",
+    "Capex, working-capital and financing requirements for future operating scenarios"
+  ],
+  "primaryMethod": "normalized_dcf",
+  "aggregationRule": "single_model",
+  "crossChecks": [
+    "Compare the normalized DCF against the supplied EV/FCF, EV/EBITDA and EV/Sales guardrails only after verifying that their forecast basis and denominator periods match.",
+    "Reconcile the six supplied cash-flow observations with the latest filing and reported segment disclosures.",
+    "Check that net cash, diluted shares and any stock compensation are not omitted from the equity bridge."
+  ],
+  "thesisChanges": [
+    "Maintain a scaling-stage thesis based on the supplied accelerated-computing platform classification, but do not assign additional value to unbuilt future software, networking or capacity economics until disclosed evidence is retrieved.",
+    "Treat the supplied forecast as an internal baseline rather than independently verified management guidance.",
+    "Keep loss-making or new optional businesses out of the base case unless their mature economics and investment requirements are evidenced."
+  ],
+  "revisionRecords": [],
+  "toolRequests": [
+    {
+      "tool": "list_filing_documents",
+      "args": {
+        "limit": 10
+      }
+    },
+    {
+      "tool": "get_reported_segments",
+      "args": {}
+    },
+    {
+      "tool": "get_peer_financials",
+      "args": {
+        "peers": [
+          "AMD",
+          "AVGO",
+          "MRVL"
+        ],
+        "peerTickers": [
+          "AMD",
+          "AVGO",
+          "MRVL"
+        ],
+        "tickers": [
+          "AMD",
+          "AVGO",
+          "MRVL"
+        ]
+      }
+    }
+  ]
+}

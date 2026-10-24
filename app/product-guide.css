@@ -1,0 +1,43 @@
+/* Shared public presentation only; access decisions remain server-side. */
+.site-nav{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px!important;padding:18px max(20px,4vw)!important;position:relative!important}
+.site-nav .site-nav-brand{min-width:0;white-space:nowrap}
+.site-nav>nav{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:wrap;gap:4px 24px;min-width:0}
+.site-nav>nav a{display:inline-flex;align-items:center;min-height:40px;font-size:14px;white-space:nowrap}
+.site-nav>.header-account{grid-column:2;grid-row:1;align-self:center}
+.account-plan-link{font-size:11px;letter-spacing:.06em;text-decoration:none;border:1px solid #8b98a5;padding:9px;color:inherit}
+.research-label{font:700 12px/1.5 var(--font-mono,monospace);letter-spacing:.13em;color:#b44b30}
+.free-sample-label{display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px;font:700 12px/1.3 var(--font-mono,monospace);letter-spacing:.12em;color:#b44b30;text-transform:uppercase}
+.free-sample-label small{font:600 12px/1.3 var(--font-sans,system-ui);letter-spacing:0;color:#526175;text-transform:none}
+.research-examples,.plan-boundary,.research-guide,.research-walkthrough{border:1px solid var(--line,#d9d5ca);background:var(--surface,#fcfaf6);padding:24px;margin:18px 0;color:var(--navy,#13263a)}
+.research-examples{display:grid;grid-template-columns:1fr 1.4fr;gap:28px}
+.research-examples h2,.plan-comparison h2,.plan-faq h2{font:500 30px/1.2 var(--font-serif,Georgia);margin:8px 0 12px}
+.research-examples p,.plan-boundary p,.research-guide dd,.plan-faq p,.plan-comparison p{font-size:15px;line-height:1.65;color:#526175;margin:8px 0}
+.research-example-links{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.research-example-links>a{display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:20px;border:1px solid #c9c5ba;border-top:3px solid #bd583d;color:inherit;text-decoration:none}
+.research-example-links>a:hover{background:#f0eee6}.research-example-links strong{font-size:20px}.research-example-links small{display:block;font-size:13px;font-weight:400;margin-top:4px}.research-example-links span{font-size:17px;line-height:1.45}.research-example-links b{font-size:13px}
+.plan-boundary{display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:24px;border-left:4px solid #bd583d}.plan-boundary strong{font-size:17px}.plan-boundary a{font-weight:700;color:inherit;white-space:nowrap;min-height:44px;display:flex;align-items:center}
+.research-guide{padding:0}.research-guide summary,.plan-faq summary{padding:18px 22px;cursor:pointer;font-size:15px;font-weight:650;line-height:1.5;min-height:48px}.research-guide dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0;padding:6px 22px 24px}.research-guide dt{font-weight:700}.research-guide dd{margin:8px 0 0}
+.research-search{margin-bottom:24px;max-width:640px}.research-search label{display:block;font-weight:650;margin-bottom:10px}.research-search>div{display:flex}.research-search input{min-width:0;flex:1;padding:14px;font:inherit;text-transform:uppercase;border:1px solid #89919a;background:white}.research-search button{padding:14px 20px;background:#13263a;color:white;border:0;font:600 15px/1.4 inherit}
+.valuation-hero-intro{font-size:18px;line-height:1.6;max-width:720px;color:#526175}.valuation-hero-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:18px}.valuation-hero-links a{color:inherit;font-size:14px;font-weight:650;min-height:36px;display:flex;align-items:center}
+.plan-comparison,.plan-faq{margin:36px 0}.plan-table-scroll{overflow-x:auto;border:1px solid #d9d5ca}.plan-comparison table{width:100%;border-collapse:collapse;text-align:left;min-width:580px}.plan-comparison caption{text-align:left;padding:18px;background:#f0eee6;font-size:14px}.plan-comparison th,.plan-comparison td{padding:18px;border-bottom:1px solid #d9d5ca;font-size:15px;line-height:1.55;vertical-align:top}.plan-comparison thead{background:#13263a;color:#fff}.plan-comparison tbody th{width:23%}.plan-comparison td{width:38%}.plan-faq details{border-bottom:1px solid #d9d5ca}.plan-faq p{padding:0 22px 18px;max-width:820px}.pro-access-context{font-size:14px;line-height:1.6;opacity:.85}
+.examples-page{max-width:1120px;margin:40px auto;padding:0 24px}.examples-page h1{font:500 clamp(32px,4vw,48px)/1.15 var(--font-serif,Georgia);max-width:820px}.examples-page p{line-height:1.75}.example-jump{display:flex;gap:24px;margin:24px 0}.example-jump a{color:inherit;min-height:44px}.research-walkthrough{scroll-margin-top:20px;padding:32px}.research-walkthrough h2{font:500 34px/1.2 var(--font-serif,Georgia)}.research-walkthrough h3{font-size:19px;margin-top:24px}.research-walkthrough a{color:inherit}.example-scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.example-scenarios>div{padding:18px;background:#f1eee5}.example-scenarios p{font-size:15px}.research-walkthrough li{margin-bottom:10px;line-height:1.65}
+.account-shell .account-head{display:none}.account-guest-shell{min-height:0!important;padding:40px 20px 60px!important}.pricing-hero h1{font-size:clamp(34px,4vw,52px)!important}.pricing-footnote{max-width:900px}.site-legal-footer nav{flex-wrap:wrap}.site-legal-footer nav a{min-height:36px;display:inline-flex;align-items:center}
+/* The options desk still carries the old .opt-pro-lock wrapper; keep it compact
+   and never let a locked panel swallow the whole screen on a phone. */
+.opt-pro-lock{display:block}.opt-pro-lock .pro-access{max-width:760px;margin:0 auto}
+/* The active PRO state reads as confirmation, not as another upsell. */
+.pro-access-active{border-top-color:var(--green,#1d6b52)}
+.pro-access-active .pro-access-kicker{color:var(--green,#1d6b52);border-bottom-color:var(--green,#1d6b52)}
+/* Provenance stays visible: a reader must be able to tell whether a person-facing
+   AI review touched this valuation, in words they can actually parse. */
+.uv-provenance{border-left:4px solid var(--cobalt,#2b4bb5);background:#eef2fa;padding:14px 18px;margin:0 0 20px;font-size:15px;line-height:1.6;color:#41506b}
+.uv-provenance strong{color:var(--navy,#13263a)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #b95337;outline-offset:4px}
+@media(max-width:760px){.site-nav{padding:14px 18px!important;gap:10px!important}.site-nav .site-nav-brand strong{font-size:21px}.site-nav .site-nav-brand>span{width:36px;height:36px}
+/* Seven destinations wrap into three ragged rows on a phone, which reads as a
+   broken header. One scrollable row stays legible and keeps every link reachable. */
+.site-nav>nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-18px;padding-inline:18px;-webkit-overflow-scrolling:touch}
+.site-nav>nav::-webkit-scrollbar{display:none}
+.site-nav>nav a{font-size:13px;min-height:44px}
+.account-plan-link{display:none}.research-examples,.plan-boundary{grid-template-columns:1fr;gap:18px}.research-guide dl{grid-template-columns:1fr}.plan-boundary,.research-examples{padding:20px}.research-examples h2{font-size:27px}.example-scenarios{grid-template-columns:1fr}.research-walkthrough{padding:22px}.valuation-shelves{grid-template-columns:minmax(0,1fr)!important}.examples-page{padding:0 18px}.plan-comparison th,.plan-comparison td{padding:14px}.research-search>div{flex-direction:column}.research-search button{min-height:48px}.research-search input{min-height:48px}}
+@media(max-width:420px){.research-example-links{grid-template-columns:1fr}.site-nav .site-nav-brand strong{font-size:19px}.site-nav .header-account{gap:6px}.site-nav .header-account-trigger{font-size:12px}.research-walkthrough h2{font-size:28px}}
